@@ -32,33 +32,52 @@ export default {
 </script>
 
 <style scoped>
+  .inicio {
+    margin: 0;
+  }
+
   .hero {
     background-image: url('../assets/blurred-pizza.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: 50%;
+    background-position-y: 40%;
     height: 100vh;
   }
 
   h1 {
     font-family: 'Fjord One', serif;
-    font-size: 4.5rem;
+    font-size: 6rem;
     color: white;
     display: inline-block;
     text-align: left;
     margin-top: 25vh;
   }
 
+  .post-hero {
+    background-image: url('../assets/pizza-and-fire.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+  }
+
   .description {
+    position: absolute;
     width: 60%;
-    margin: 50px auto;
+    top: 20%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     color: white;
     background-color: rgb(0, 0, 0, 0.7);
-    padding: 20px;
+    padding: 1% 3%;
     font-family: 'Fjalla One', sans-serif;
   }
 
   p {
     text-align: left;
+    font-size: 1.4rem;
   }
 </style>
