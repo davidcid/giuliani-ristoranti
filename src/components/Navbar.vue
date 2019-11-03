@@ -30,13 +30,13 @@ export default {
 
 <style scoped>
   nav {
-    background-color: #533210;
-    opacity: 60%;
+    background-color: rgba(83, 50, 16, 0.7);
     display: grid;
     grid-template-columns: 3fr 1fr 3fr;
     color: white;
     margin: 0;
     padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 4px 5px 2px;
   }
 
   ul {
