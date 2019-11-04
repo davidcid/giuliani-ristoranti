@@ -46,7 +46,7 @@ export default {
 
   h1 {
     font-family: 'Fjord One', serif;
-    font-size: 6rem;
+    font-size: 3rem;
     color: white;
     display: inline-block;
     text-align: left;
@@ -78,6 +78,16 @@ export default {
 
   p {
     text-align: left;
-    font-size: 1.4rem;
+    font-size: 0.9rem;
+  }
+
+  @media only screen and (min-width: 600px) {
+    h1 {
+      font-size: 6rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+    }
   }
 </style>

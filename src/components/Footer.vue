@@ -22,6 +22,10 @@ export default {
     font-family: 'Fjalla One', sans-serif;
   }
 
+  footer p {
+    font-size: 0.7rem;
+  }
+
   .legal-cookies {
     display: flex;
     color: rgba(255, 255, 255, .64);
@@ -34,6 +38,12 @@ export default {
 
   .copyright {
     color: rgba(255, 255, 255, .75);
+  }
+
+  @media only screen and (min-width: 600px) {
+    footer p {
+      font-size: 1rem;
+    }
   }
 
 </style>
