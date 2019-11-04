@@ -40,7 +40,7 @@ export default {
     background-image: url('../assets/blurred-pizza.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: 40%;
+    background-position-y: 60%;
     height: 100vh;
   }
 

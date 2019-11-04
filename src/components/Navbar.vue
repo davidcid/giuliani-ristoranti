@@ -3,16 +3,16 @@
     <ul>
       <li><router-link to="/">inicio</router-link></li>
       <li class="point">•</li>
-      <li>nosotros</li>
+      <li><router-link to="/nosotros">nosotros</router-link></li>
       <li class="point">•</li>
-      <li>local</li>
+      <li><router-link to="/local">local</router-link></li>
     </ul>
     <h1>Giuliani<br><span>Ristorante</span></h1>
     <div class="right-nav">
       <ul>
-        <li>carta</li>
+        <li><router-link to="/carta">carta</router-link></li>
         <li class="point">•</li>
-        <li class="reservas">reservas</li>
+        <li class="reservas"><router-link to="/reservas">reservas</router-link></li>
       </ul>
       <ul class="social">
         <li><i class="fab fa-facebook-square"></i></li>
