@@ -2,14 +2,18 @@
   <div class="nosotros">
     <Navbar />
     <section class="masa">
-      <img src="@/assets/working-on-pizza.jpg" alt="pizza-dough">
+      <div class="img-container">
+        <img src="@/assets/working-on-pizza.jpg" alt="pizza-dough">
+      </div>
       <div>
         <p>Todas nuestras pizzas napolitanas se hornean entre 60 y 90 segundos a unos 500 grados, en un horno de piedra refractaria fabricado a mano en Nápoles por la cuarta generación de una familia de artesanos.</p>
         <p>¿El resultado? Una pizza rica en fibra, vitaminas y nutrientes, con un aroma más intenso que respira el espíritu relajado y delicioso de la ciudad de Verona en cada uno de sus ingredientes.</p>
       </div>
     </section>
     <section class="alma">
-      <img src="@/assets/pizza-chef.jpg" alt="pizza-chef">
+      <div class="img-container">
+        <img src="@/assets/pizza-chef.jpg" alt="pizza-chef">
+      </div>
       <div>
         <p>El alma de nuestras pizzas se encuentra en la harina. Las harinas que utilizamos son diferentes y alternativas, abarcando desde las tradicionales hasta las de cinco cereales. </p>
         <p>Cada una de nuestras pizzas, elaboradas con una masa diferente, son una combinación de sabores cada vez más diversos y sorprendentes.</p>
@@ -63,9 +67,18 @@ export default {
     }
 
     section img {
-      max-width: 700px;
-      height: 100%;
       margin: 0;
+      transition: 1.5s ease-in-out;
+    }
+
+    .img-container {
+      height: 100%;
+      overflow: hidden;
+      max-width: 700px;
+    }
+
+    .img-container img:hover {
+      transform: scale(1.7);
     }
 
     section p {
@@ -74,6 +87,14 @@ export default {
       margin: 0 30px;
       padding-bottom: 30px;
       font-size: 1rem;
+    }
+
+    .alma .img-container {
+      order: 2;
+    }
+
+    .alma p {
+      text-align: right;
     }
   }
 
