@@ -56,6 +56,7 @@
         </div>
       </div>
     </section>
+    <div id="mapid"></div>
     <Footer />
   </div>
 </template>
@@ -64,6 +65,7 @@
 // @ is an alias to /src
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
+// import { LMap, LTileLayer, LMarker } from 'vue2-leaflet'
 
 export default {
   name: 'local',
@@ -163,14 +165,22 @@ export default {
     width: 92%;
   }
 
+  #mapid {
+    height: 180px;
+  }
+
   @media only screen and (min-width: 600px) {
+    .hero {
+      height: 600px;
+    }
     h1 {
       font-size: 5rem;
+      margin-top: 100px;
+      margin-left: 10%;
     }
 
     .restaurante {
-      display: flex;
-      justify-content: center;
+      flex-direction: row;
       padding: 60px 25px;
     }
 
@@ -183,11 +193,14 @@ export default {
     }
 
     .restaurant-description {
+      margin: 0;
+      padding: 0;
+      order: 2;
       max-width: 350px;
       text-align: left;
     }
 
-    .restaurant-description h3 {
+    .restaurant-description h2 {
       margin: 0;
       padding: 0;
     }
