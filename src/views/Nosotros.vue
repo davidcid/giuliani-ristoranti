@@ -40,7 +40,7 @@ export default {
 <style scoped>
   .nosotros {
     margin: 0;
-    font-family: 'Fjord One', sans-serif;
+    background-color: #FFF9EF;
   }
 
   section {
@@ -50,13 +50,14 @@ export default {
   }
 
   section img {
-    width: 90%;
-    margin: 30px auto;
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   section p {
     text-align: justify;
-    margin: 0px 30px 50px 30px;
+    margin: 0px 20px 50px 20px;
+    font-family: 'Fjord One', sans-serif;
   }
 
   @media only screen and (min-width: 600px) {
@@ -67,6 +68,8 @@ export default {
     }
 
     section img {
+      width: 90%;
+      margin: 30px auto;
       margin: 0;
       transition: 1.5s ease-in-out;
     }
