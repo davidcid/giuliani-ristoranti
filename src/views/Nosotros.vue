@@ -60,6 +60,10 @@ export default {
     font-family: 'Fjord One', sans-serif;
   }
 
+  .masa img {
+    margin-top: 100px;
+  }
+
   @media only screen and (min-width: 600px) {
     section {
       flex-direction: row;

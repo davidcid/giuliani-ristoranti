@@ -9,7 +9,7 @@
         <img src="@/assets/inner-hall.jpg" alt="entrada-restaurante">
       </div>
       <div class="restaurant-description">
-        <h3>nuestro restaurante</h3>
+        <h2>nuestro restaurante</h2>
         <p>Con un nuevo horno de leña traído desde Nápoles, la misma estética industrial de sus otros dos restaurantes y con un nuevo y experto equipo de pizzaiolos procedentes de la ciudad italiana, Giuliani Ristorante inaugura su local en Madrid en la calle de los Areneros 45.</p>
         <p>Así, sus deliciosas pizzas de masa elástica con harina de fuerza italiana y bordes gruesos y esponjosos, que ya son famosas en todo Madrid, son también aquí las protagonistas indiscutibles. En todos sus establecimientos Giuliani Ristorante ofrece la receta auténtica de las pizzas napolitanas, reconocidas por la Unesco como Patrimonio Inmaterial de la Humanidad.
         </p>
@@ -98,17 +98,29 @@ export default {
     padding: 20px;
   }
 
-  .visita {
+  .restaurante {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-top: 80px;
   }
 
-  .text-left {
-    width: 450px;
-    text-align: right;
-    margin-right: 35px;
+  .img-container {
+    order: 2;
+  }
+
+  .img-container img {
+    width: 100%;
+  }
+
+  .restaurant-description {
+    padding: 0;
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  .visita {
+    display: flex;
+    align-items: center;
   }
 
   .buttons-right {
@@ -126,96 +138,121 @@ export default {
     width: 150px;
   }
 
+  .local > img {
+    display: none;
+  }
+
+  .horario-container {
+    margin: 40px 0;
+  }
+
+  .horario > img {
+    width: 100%;
+  }
+
+  .visita {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .text-left {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 92%;
+  }
+
   @media only screen and (min-width: 600px) {
     h1 {
       font-size: 5rem;
     }
-  }
 
-  .restaurante {
-    display: flex;
-    justify-content: center;
-    padding: 60px 25px;
-  }
+    .restaurante {
+      display: flex;
+      justify-content: center;
+      padding: 60px 25px;
+    }
 
-  .img-container {
-    margin: 0 30px;
-  }
+    .img-container {
+      margin: 0 30px;
+    }
 
-  .img-container img {
-    max-width: 330px;
-  }
+    .img-container img {
+      max-width: 330px;
+    }
 
-  .restaurant-description {
-    max-width: 350px;
-    text-align: left;
-  }
+    .restaurant-description {
+      max-width: 350px;
+      text-align: left;
+    }
 
-  .restaurant-description h3 {
-    margin: 0;
-    padding: 0;
-  }
+    .restaurant-description h3 {
+      margin: 0;
+      padding: 0;
+    }
 
-  .restaurant-description p {
-    font-family: 'Fjord One', serif;
-  }
+    .restaurant-description p {
+      font-family: 'Fjord One', serif;
+    }
 
-  #chef {
-    display: block;
-    max-width: 700px;
-    margin: 80px auto;
-  }
+    #chef {
+      display: block;
+      max-width: 700px;
+      margin: 80px auto;
+    }
 
-  .yellow {
-    background-color: #FFF9EF;
-    padding: 400px 0;
-    margin-top: -350px;
-  }
+    .yellow {
+      background-color: #FFF9EF;
+      padding: 400px 0;
+      margin-top: -350px;
+    }
 
-  .horario {
-    display: flex;
-    justify-content: center;
-    margin-top: 120px;
-  }
+    .horario {
+      display: flex;
+      justify-content: center;
+      margin-top: 120px;
+    }
 
-  .horario img {
-    width: 500px;
-  }
+    .horario img {
+      width: 500px;
+    }
 
-  .horario-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 300px;
-    font-size: 2rem;
-    margin-right: 200px;
-  }
+    .horario-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 300px;
+      font-size: 2rem;
+      margin-right: 200px;
+    }
 
-  .horario-container h2 {
-    margin: 0px;
-  }
+    .horario-container h2 {
+      margin: 0px;
+    }
 
-  .dias {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+    .dias {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
 
-  .dia {
-    margin: 20px;
-  }
+    .dia {
+      margin: 20px;
+    }
 
-  .dia h4 {
-    font-family: 'Fjalla One', serif;
-    padding: 0;
-    margin: 0;
-    font-size: 1rem;
-  }
+    .dia h4 {
+      font-family: 'Fjalla One', serif;
+      padding: 0;
+      margin: 0;
+      font-size: 1rem;
+    }
 
-  .dia p {
-    font-family: 'Fjord One', serif;
-    padding: 0;
-    margin: 0;
-    font-size: 1rem;
+    .dia p {
+      font-family: 'Fjord One', serif;
+      padding: 0;
+      margin: 0;
+      font-size: 1rem;
+    }
   }
 
 </style>

@@ -41,13 +41,15 @@ export default {
 
 <style scoped>
   nav {
+    width: 100%;
     overflow: hidden;
-    position: relative;
+    position: fixed;
     background-color: rgba(83, 50, 16, 0.7);
     box-shadow: rgba(0, 0, 0, 0.35) 0 4px 5px 2px;
     color: white;
     margin: 0;
     padding: 0;
+    z-index: 1;
   }
 
   .logo i {
@@ -146,6 +148,7 @@ export default {
 
   @media only screen and (min-width: 600px) {
     nav {
+      position: relative;
       background-color: rgba(83, 50, 16, 0.7);
       display: grid;
       grid-template-columns: 1fr 3fr;
