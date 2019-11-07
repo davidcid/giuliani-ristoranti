@@ -44,7 +44,7 @@ export default {
     width: 100%;
     overflow: hidden;
     position: fixed;
-    background-color: rgba(83, 50, 16, 0.7);
+    background-image: linear-gradient(hsla(30, 68%, 12%, 0.7), hsla(30, 68%, 35%, 0.7));
     box-shadow: rgba(0, 0, 0, 0.35) 0 4px 5px 2px;
     color: white;
     margin: 0;
