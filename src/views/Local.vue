@@ -171,6 +171,7 @@ export default {
 
   @media only screen and (min-width: 600px) {
     .hero {
+      background-position-y: 60%;
       height: 600px;
     }
     h1 {
@@ -224,7 +225,8 @@ export default {
     .horario {
       display: flex;
       justify-content: center;
-      margin-top: 120px;
+      margin: 20px;
+      margin-bottom: 60px;
     }
 
     .horario img {

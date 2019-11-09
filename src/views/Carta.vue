@@ -91,7 +91,7 @@ export default {
 
   @media only screen and (min-width: 600px) {
     .hero {
-      height: 600px;
+      background-size: 100% cover;
     }
     h1 {
       font-size: 5rem;
