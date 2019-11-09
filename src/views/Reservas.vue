@@ -8,10 +8,20 @@
     <form action="">
       <input type="text" placeholder="nombre y apellidos">
       <input type="email" placeholder="email">
-      <input type="date" placeholder="fecha de la reserva">
-      <input type="time" placheholder="hora de la reserva">
-      <input type="number" placeholder="nº de personas">
-      <input type="number" placeholder="teléfono de contacto">
+      <div class="conjunto1">
+        <div class="fecha">
+          <label for="fecha">Fecha de la reserva</label>
+          <input type="date" id="fecha" placeholder="fecha de la reserva">
+        </div>
+        <div class="hora">
+          <label for="hora">Hora de la reserva</label>
+          <input type="time" id="hora" placheholder="hora de la reserva">
+        </div>
+      </div>
+      <div class="conjunto2">
+        <input type="number" id="personas" placeholder="nº de personas">
+        <input type="number" id="telefono" placeholder="teléfono de contacto">
+      </div>
       <textarea name="mensaje" id="" cols="20" rows="10" placeholder="mensaje (opcional)"></textarea>
       <button>Enviar</button>
     </form>
@@ -69,13 +79,13 @@ export default {
     display: block;
     width: 90%;
     margin: 15px auto;
-    padding: 25px 15px;
+    padding: 20px 10px;
     height: 25px;
-    background: rgba(255,255,255,.57);
+    background: rgba(255,255,255,.62);
     border: 1px solid #533210;
     color: #533210;
-    font-family: 'Fjord One', serif;
-    font-size: 0.8rem;
+    font-family: 'Nunito', serif;
+    font-size: 1.2rem;
   }
 
   textarea {
@@ -94,9 +104,68 @@ export default {
   }
 
   @media only screen and (min-width: 600px) {
+    .reservas {
+      background-size: 100% auto;
+    }
+
+    .reservas h1,
+    .reservas h3,
+    .reservas p {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .reservas p {
+      padding-top: 40px;
+    }
+
+    .telephone {
+      padding-bottom: 30px;
+    }
+
     form{
       max-width: 600px;
       margin: 0 auto;
+    }
+
+    input,textarea,button {
+      width: 100%;
+    }
+
+    .conjunto1 {
+      display: flex;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .conjunto2 {
+      display: flex;
+      justify-content: center;
+    }
+
+    #personas {
+      margin-right: 10px;
+    }
+
+    #telefono {
+      margin-left: 10px;
+    }
+
+    .fecha,.hora {
+      width: 100%;
+      text-align: left;
+    }
+
+    .fecha {
+      margin-right: 10px;
+    }
+
+    .hora {
+      margin-left: 10px;
+    }
+
+    #hora, #fecha {
+      margin-top: 0;
     }
   }
 </style>
