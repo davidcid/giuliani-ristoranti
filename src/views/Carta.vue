@@ -56,7 +56,7 @@ export default {
     background-image: url('../assets/pizza-and-fire-2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-y: 0px;
+    background-position: center;
     height: 50vh;
   }
 

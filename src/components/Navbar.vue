@@ -20,8 +20,8 @@
         <li class="reservas"><router-link to="/reservas">reservas</router-link></li>
       </ul>
       <ul class="social">
-        <li><i class="fab fa-facebook-square"></i></li>
-        <li><i class="fab fa-instagram"></i></li>
+        <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
       </ul>
     </div>
   </nav>

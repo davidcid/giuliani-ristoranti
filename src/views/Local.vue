@@ -51,12 +51,12 @@
           <p>Un pequeño y acogedor local en la calle de los Areneros donde se respira el verdadero ambiente de una pizzería de las callecitas de Nápoles y se crea la auténtica pizza napolitana.</p>
         </div>
         <div class="buttons-right">
-          <button>ver el menú</button>
-          <button>reserva una mesa</button>
+          <button><router-link to="/carta">ver el menú</router-link></button>
+          <button><router-link to="/reservas">reserva una mesa</router-link></button>
         </div>
       </div>
     </section>
-    <div id="mapid"></div>
+    <div id="map"><iframe height:600 src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=calle%20mayor%206%2C%20madrid+(giuliani%20ristorante)&ie=UTF8&t=&z=17&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><br />
     <Footer />
   </div>
 </template>
@@ -125,6 +125,11 @@ export default {
     align-items: center;
   }
 
+  button a {
+    color: white;
+    text-decoration: none;
+  }
+
   .buttons-right {
     display: flex;
     flex-direction: column;
@@ -155,7 +160,7 @@ export default {
   .visita {
     display: flex;
     flex-direction: column;
-    margin: 20px 0;
+    padding: 20px 0;
   }
 
   .text-left {
@@ -165,8 +170,13 @@ export default {
     width: 92%;
   }
 
-  #mapid {
-    height: 180px;
+  map {
+    width: 100%;
+  }
+
+  iframe {
+    width: 100%;
+    height: 600;
   }
 
   @media only screen and (min-width: 600px) {
@@ -190,7 +200,13 @@ export default {
     }
 
     .img-container img {
-      max-width: 330px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .horario img {
+      height: 100%;
+      max-width: 600px;
     }
 
     .restaurant-description {
@@ -219,18 +235,16 @@ export default {
     .yellow {
       background-color: #FFF9EF;
       padding: 400px 0;
+      padding-bottom: 0;
       margin-top: -350px;
     }
 
     .horario {
       display: flex;
       justify-content: center;
+      align-items: center;
       margin: 20px;
       margin-bottom: 60px;
-    }
-
-    .horario img {
-      width: 500px;
     }
 
     .horario-container {
@@ -239,11 +253,24 @@ export default {
       justify-content: center;
       width: 300px;
       font-size: 2rem;
-      margin-right: 200px;
+      margin-right: 10%;
     }
 
     .horario-container h2 {
       margin: 0px;
+    }
+
+    .visita {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 70px;
+    }
+
+    .text-left {
+      text-align: right;
+      max-width: 450px;
+      margin-right: 60px;
     }
 
     .dias {

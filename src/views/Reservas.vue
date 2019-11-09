@@ -51,6 +51,7 @@ export default {
     margin: 0;
     background-image: url('../assets/twopizzas.jpg');
     background-size: cover;
+    background-position: center;
     color: white;
   }
   h1 {
