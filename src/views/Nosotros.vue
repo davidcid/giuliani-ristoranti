@@ -80,7 +80,7 @@ export default {
     }
 
     .img-container img:hover {
-      transform: scale(1.7);
+      transform: scale(1.1);
     }
 
     section p {
