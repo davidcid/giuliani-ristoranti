@@ -55,8 +55,8 @@
           <button><router-link to="/reservas">reserva una mesa</router-link></button>
         </div>
       </div>
+      <div id="map"><iframe height:600 src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=calle%20mayor%206%2C%20madrid+(giuliani%20ristorante)&ie=UTF8&t=&z=17&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><br />
     </section>
-    <div id="map"><iframe height:600 src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=calle%20mayor%206%2C%20madrid+(giuliani%20ristorante)&ie=UTF8&t=&z=17&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div><br />
     <Footer />
   </div>
 </template>
@@ -96,7 +96,7 @@ export default {
     color: white;
     display: inline-block;
     text-align: left;
-    margin-top: 10vh;
+    margin-top: 20vh;
     padding: 20px;
   }
 
@@ -170,13 +170,10 @@ export default {
     width: 92%;
   }
 
-  map {
-    width: 100%;
-  }
-
   iframe {
+    margin-top: 55px;
     width: 100%;
-    height: 600;
+    height: 350px;
   }
 
   @media only screen and (min-width: 600px) {
@@ -294,6 +291,10 @@ export default {
       padding: 0;
       margin: 0;
       font-size: 1rem;
+    }
+
+    iframe {
+      width: 75%;
     }
   }
 

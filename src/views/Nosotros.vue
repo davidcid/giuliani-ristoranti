@@ -67,16 +67,16 @@ export default {
       margin: 100px;
     }
 
-    section img {
-      width: 90%;
-      margin: 30px auto;
-      margin: 0;
-      transition: 1.5s ease-in-out;
-    }
-
     .img-container {
       overflow: hidden;
       max-width: 700px;
+      width: 45%;
+    }
+
+    section img {
+      margin: 30px auto;
+      margin: 0;
+      transition: 1.5s linear;
     }
 
     .img-container img:hover {

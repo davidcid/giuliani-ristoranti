@@ -50,7 +50,7 @@ export default {
     color: white;
     display: inline-block;
     text-align: left;
-    margin-top: 25vh;
+    margin-top: 35vh;
   }
 
   .post-hero {
@@ -63,7 +63,7 @@ export default {
 
   .description {
     position: absolute;
-    width: 60%;
+    width: 80%;
     top: 20%;
     max-width: 700px;
     margin-left: auto;
@@ -78,7 +78,7 @@ export default {
 
   p {
     text-align: left;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 
   @media only screen and (min-width: 600px) {

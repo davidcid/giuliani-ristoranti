@@ -44,8 +44,8 @@ export default {
     width: 100%;
     overflow: hidden;
     position: fixed;
-    background-image: linear-gradient(hsla(30, 68%, 12%, 0.7), hsla(30, 68%, 35%, 0.7));
-    box-shadow: rgba(0, 0, 0, 0.35) 0 4px 5px 2px;
+    background-image: linear-gradient(rgba(51, 31, 10, 1), hsla(30, 68%, 35%, 0.7));
+    box-shadow: rgba(0, 0, 0, 0.35) 0 2px 7px 1px;
     color: white;
     margin: 0;
     padding: 0;
@@ -66,13 +66,14 @@ export default {
 
   .links {
     display: none;
-    transition: all .3s ease-in-out;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.3s ease-in-out;
   }
 
   .expanded {
-    transform: translateY(0);
-    display: flex;
-    flex-direction: column;
+    display: block;
+    transform: scaleY(1);
   }
 
   h1 {
@@ -159,7 +160,10 @@ export default {
     }
 
     .links {
+      display: flex;
       flex-direction: row;
+      justify-content: center;
+      align-content: center;
     }
 
     .logo i {

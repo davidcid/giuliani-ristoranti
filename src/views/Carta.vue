@@ -67,8 +67,12 @@ export default {
     color: white;
     display: inline-block;
     text-align: left;
-    margin-top: 10vh;
+    margin-top: 30vh;
     padding: 20px;
+  }
+
+  article:last-child {
+    padding-bottom: 75px;
   }
 
   .main {
