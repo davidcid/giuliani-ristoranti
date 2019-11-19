@@ -44,7 +44,7 @@ export default {
     width: 100%;
     overflow: hidden;
     position: fixed;
-    background-image: linear-gradient(rgba(51, 31, 10, 1), hsla(30, 68%, 35%, 0.7));
+    background-image: linear-gradient(rgba(51, 31, 10, 1), hsla(30, 68%, 35%, 0.3));
     box-shadow: rgba(0, 0, 0, 0.35) 0 2px 7px 1px;
     color: white;
     margin: 0;
@@ -127,6 +127,16 @@ export default {
 
   li a:hover:before {
     width: 100%;
+  }
+
+  li a.router-link-exact-active:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+    background-color: white;
   }
 
   .point {
