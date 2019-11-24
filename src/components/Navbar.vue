@@ -1,9 +1,12 @@
 <template>
   <nav>
     <div class="logo">
-      <h3><router-link to ="/">Giuliani<br><span>Ristorante</span></router-link></h3>
+      <router-link to ="/">
+        <h3>Giuliani</h3>
+        <h4>Ristorante</h4>
+      </router-link>
     </div>
-    <div class="nav-links">
+    <div class="nav-links" :class="{'nav-active': expanded}">
       <ul class="left-nav">
         <li><router-link to="/">inicio</router-link></li>
         <li class="point">•</li>
@@ -21,7 +24,7 @@
         <li><a href="#"><i class="fab fa-instagram"></i></a></li>
       </ul>
     </div>
-    <div class="burger">
+    <div class="burger" @click="toggleMenu">
       <div class="line1"></div>
       <div class="line2"></div>
       <div class="line3"></div>
@@ -32,10 +35,14 @@
 <script>
 export default {
   name: 'Navbar',
+  data () {
+    return {
+      expanded: false
+    }
+  },
   methods: {
     toggleMenu () {
-      const x = document.querySelector('.links')
-      x.classList.toggle('expanded')
+      this.expanded === true ? this.expanded = false : this.expanded = true
     }
   }
 }
@@ -50,6 +57,9 @@ export default {
 }
 
 nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -58,13 +68,17 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.35) 0 2px 7px 1px;
 }
 
-.logo h3 a {
-  font-size: 1.7rem;
+.logo * {
+  font-family: 'Fjord One', serif;
   text-decoration: none;
 }
 
-.logo h3 a span {
-  font-size: 0.9rem;
+.logo h3 {
+  font-size: 1.5rem;
+}
+
+.logo h4 {
+  font-size: 1.1rem;
 }
 
 .nav-links {
@@ -83,6 +97,34 @@ nav {
 .nav-links li {
   list-style: none;
   margin: 0 .5rem;
+  position: relative;
+}
+
+.left-nav a:before,
+.right-nav a:before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background-color: white;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.left-nav a:hover:before,
+.right-nav a:hover:before {
+  width: 100%;
+}
+
+li a.router-link-exact-active:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background-color: white;
 }
 
 .nav-links a {
@@ -97,7 +139,6 @@ nav {
 }
 
 .reservas {
-  display: inline-block;
   border: 1px solid white;
   padding: 6px 12px;
 }
@@ -253,16 +294,6 @@ nav {
 
   li a:hover:before {
     width: 100%;
-  }
-
-  li a.router-link-exact-active:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0;
-    bottom: -3px;
-    background-color: white;
   }
 
   .point {

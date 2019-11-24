@@ -4,13 +4,27 @@
   </div>
 </template>
 
-<style lang="scss">
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+h1 {
+  font-family: 'Fjord One', serif;
+  font-size: 3rem;
+  color: white;
+  text-align: left;
+  padding: 7rem 2rem;
 }
 
 #nav {

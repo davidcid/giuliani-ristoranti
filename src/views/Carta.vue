@@ -1,7 +1,7 @@
 <template>
   <div class="carta">
+    <Navbar />
     <div class="hero">
-      <Navbar />
       <h1>La Carta</h1>
     </div>
     <div class="main">
@@ -48,27 +48,15 @@ export default {
 </script>
 
 <style scoped>
-  .local {
-    margin: 0;
-  }
-
   .hero {
     background-image: url('../assets/pizza-and-fire-2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 50vh;
-  }
-
-  h1 {
-    font-family: 'Fjord One', serif;
-    font-size: 3rem;
-    font-weight: 300;
-    color: white;
-    display: inline-block;
-    text-align: left;
-    margin-top: 30vh;
-    padding: 20px;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   article:last-child {
@@ -99,9 +87,6 @@ export default {
     }
     h1 {
       font-size: 5rem;
-      margin-top: 100px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .main {

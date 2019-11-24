@@ -1,7 +1,7 @@
 <template>
   <div class="inicio">
+    <Navbar />
     <div class="hero">
-      <Navbar />
       <h1>Auténtica Pizza<br>Italiana</h1>
     </div>
     <div class="post-hero">
@@ -32,51 +32,40 @@ export default {
 </script>
 
 <style scoped>
-  .inicio {
-    margin: 0;
-  }
-
   .hero {
     background-image: url('../assets/blurred-pizza.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: 60%;
     height: 100vh;
-  }
-
-  h1 {
-    font-family: 'Fjord One', serif;
-    font-size: 3rem;
-    color: white;
-    display: inline-block;
-    text-align: left;
-    margin-top: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .post-hero {
     background-image: url('../assets/pizza-and-fire.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
-    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .description {
-    position: absolute;
-    width: 80%;
-    top: 20%;
+    width: 70%;
     max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
     color: white;
-    background-color: rgb(0, 0, 0, 0.7);
-    padding: 1% 3%;
+    background-color: rgba(71, 32, 0, 0.87);
     font-family: 'Fjalla One', sans-serif;
+    padding: 2rem;
+    margin: 50px 0;
+    box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.486);
   }
 
   p {
+    padding: 1rem 0;
     text-align: left;
     font-size: 1.1rem;
   }

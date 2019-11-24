@@ -1,7 +1,7 @@
 <template>
   <div class="local">
+    <Navbar />
     <div class="hero">
-      <Navbar />
       <h1>Calle de los Areneros 45, Madrid</h1>
     </div>
     <section class="restaurante">
@@ -77,27 +77,18 @@ export default {
 </script>
 
 <style scoped>
-  .local {
-    margin: 0;
-  }
-
   .hero {
     background-image: url('../assets/trattoria-wall.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: 0px;
-    height: 50vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
 
   h1 {
-    font-family: 'Fjord One', serif;
-    font-size: 3rem;
-    font-weight: 300;
-    color: white;
-    display: inline-block;
-    text-align: left;
-    margin-top: 20vh;
-    padding: 20px;
+    text-align: center;
   }
 
   .restaurante {
@@ -114,10 +105,12 @@ export default {
     width: 100%;
   }
 
-  .restaurant-description {
-    padding: 0;
-    width: 92%;
-    margin: 0 auto;
+  .restaurant-description h2 {
+    padding-top: 2rem;
+  }
+
+  .restaurant-description p {
+    padding: 1rem 1rem 1rem 2rem;
   }
 
   .visita {
@@ -131,6 +124,7 @@ export default {
   }
 
   .buttons-right {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
   }
@@ -151,6 +145,10 @@ export default {
 
   .horario-container {
     margin: 40px 0;
+  }
+
+  .dia {
+    margin: 2rem 0;
   }
 
   .horario > img {
@@ -180,11 +178,11 @@ export default {
     .hero {
       background-position-y: 60%;
       height: 600px;
+      justify-content: center;
     }
     h1 {
       font-size: 5rem;
-      margin-top: 100px;
-      margin-left: 10%;
+      text-align: center;
     }
 
     .restaurante {
@@ -221,6 +219,7 @@ export default {
 
     .restaurant-description p {
       font-family: 'Fjord One', serif;
+      padding-left: 0;
     }
 
     #chef {

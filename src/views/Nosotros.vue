@@ -39,7 +39,6 @@ export default {
 
 <style scoped>
   .nosotros {
-    margin: 0;
     background-color: #FFF9EF;
   }
 
@@ -54,7 +53,7 @@ export default {
     margin-bottom: 20px;
   }
 
-  section p {
+  p {
     text-align: justify;
     margin: 0px 20px 50px 20px;
     font-family: 'Fjord One', sans-serif;
@@ -64,7 +63,6 @@ export default {
     section {
       flex-direction: row;
       justify-content: center;
-      margin: 100px;
     }
 
     .img-container {
@@ -89,6 +87,14 @@ export default {
       margin: 0 30px;
       padding-bottom: 30px;
       font-size: 1rem;
+    }
+
+    .masa {
+      padding: 120px 0;
+    }
+
+    .alma {
+      padding-bottom: 120px;
     }
 
     .alma .img-container {

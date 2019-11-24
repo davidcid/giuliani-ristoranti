@@ -44,30 +44,29 @@ export default {
 </script>
 
 <style scoped>
-  * {
-    box-sizing: border-box;
-  }
   .reservas {
     margin: 0;
     background-image: url('../assets/twopizzas.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: white;
   }
+
   h1 {
-    font-family: 'Fjord One', serif;
-    font-size: 3rem;
-    padding-top: 90px;
-    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 0rem;
+    padding-bottom: 0;
   }
+
   h3 {
     font-family: 'Fjord One', serif;
     font-size: 1.2rem;
-    margin: 0;
   }
 
   p  {
     margin: 60px 5px 30px;
+    padding: 0 2rem;
   }
 
   .telephone {
@@ -77,8 +76,6 @@ export default {
   }
 
   input, textarea {
-    display: block;
-    width: 90%;
     margin: 15px auto;
     padding: 20px 10px;
     height: 25px;
@@ -89,8 +86,15 @@ export default {
     font-size: 1.2rem;
   }
 
+  .conjunto1,
+  .conjunto2 {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+
   textarea {
-    height: 100px;
+    min-height: 100px;
   }
 
   button {
@@ -133,23 +137,11 @@ export default {
       width: 100%;
     }
 
-    .conjunto1 {
-      display: flex;
-      justify-content: center;
-      font-size: 1.2rem;
-    }
-
+    .conjunto1,
     .conjunto2 {
       display: flex;
-      justify-content: center;
-    }
-
-    #personas {
-      margin-right: 10px;
-    }
-
-    #telefono {
-      margin-left: 10px;
+      justify-content: space-between;
+      font-size: 1.2rem;
     }
 
     .fecha,.hora {

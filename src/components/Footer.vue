@@ -16,9 +16,11 @@ export default {
 
 <style scoped>
   footer {
+    min-height: 4rem;
     background-color: #212121;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     font-family: 'Fjalla One', sans-serif;
   }
 
@@ -29,7 +31,6 @@ export default {
   .legal-cookies {
     display: flex;
     color: rgba(255, 255, 255, .64);
-    margin: 0 auto;
   }
 
   .legal-cookies p {
