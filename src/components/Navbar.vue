@@ -1,12 +1,9 @@
 <template>
   <nav>
     <div class="logo">
-      <h1><router-link to ="/">Giuliani<br><span>Ristorante</span></router-link></h1>
-      <a href="javascript:void(0);" class="icon" @click="toggleMenu">
-        <i class="fa fa-bars"></i>
-      </a>
+      <h3><router-link to ="/">Giuliani<br><span>Ristorante</span></router-link></h3>
     </div>
-    <div class="links expanded">
+    <div class="nav-links">
       <ul class="left-nav">
         <li><router-link to="/">inicio</router-link></li>
         <li class="point">•</li>
@@ -24,6 +21,11 @@
         <li><a href="#"><i class="fab fa-instagram"></i></a></li>
       </ul>
     </div>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
   </nav>
 </template>
 
@@ -40,7 +42,131 @@ export default {
 </script>
 
 <style scoped>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background: linear-gradient(rgba(71, 32, 0, 1) 0%, rgba(71, 32, 0, 0.4) 120%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0 2px 7px 1px;
+}
+
+.logo h3 a {
+  font-size: 1.7rem;
+  text-decoration: none;
+}
+
+.logo h3 a span {
+  font-size: 0.9rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+}
+
+.nav-links ul {
+  display: flex;
+  margin: 0 1.5rem;
+  align-items: center;
+}
+
+.nav-links li {
+  list-style: none;
+  margin: 0 .5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+
+.social i {
+  font-size: 2rem;
+  margin-left: 100%;
+}
+
+.reservas {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 6px 12px;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  background-color: white;
+  width: 25px;
+  height: 1px;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-y: hidden;
+  }
+
   nav {
+    position: fixed;
+    width: 100%;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: rgba(71, 32, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+  }
+
+  .nav-links ul li {
+    margin: 1.6rem 0;
+  }
+
+  .point {
+    display: none;
+  }
+
+  .social i {
+    margin: 0;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-active {
+    transform: translateY(0%);
+  }
+}
+
+  /*nav {
     width: 100%;
     overflow: hidden;
     position: fixed;
@@ -252,5 +378,5 @@ export default {
     h1 span {
       font-size: 1.1rem;
     }
-  }
+  }*/
 </style>
